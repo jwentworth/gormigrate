@@ -11,8 +11,8 @@
 //      "log"
 //
 //      "github.com/go-gormigrate/gormigrate"
-//      "github.com/jinzhu/gorm"
-//      _ "github.com/jinzhu/gorm/dialects/sqlite"
+//      "gorm.io/gorm"
+//      _ "gorm.io/gorm/dialects/sqlite"
 //  )
 //
 //  type Person struct {

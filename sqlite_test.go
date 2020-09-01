@@ -3,12 +3,14 @@
 package gormigrate
 
 import (
-	_ "github.com/jinzhu/gorm/dialects/sqlite"
+	"os"
+
+	"gorm.io/driver/sqlite"
 )
 
 func init() {
 	databases = append(databases, database{
-		name:    "sqlite3",
-		connEnv: "SQLITE_CONN_STRING",
+		name: "sqlite3",
+		db:   sqlite.Open(os.Getenv("SQLITE_CONN_STRING")),
 	})
 }

@@ -3,7 +3,7 @@
 package gormigrate
 
 import (
-	_ "github.com/jinzhu/gorm/dialects/mssql"
+	_ "gorm.io/gorm/dialects/mssql"
 )
 
 func init() {

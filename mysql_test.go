@@ -3,12 +3,15 @@
 package gormigrate
 
 import (
-	_ "github.com/jinzhu/gorm/dialects/mysql"
+	"os"
+
+	"gorm.io/driver/mysql"
 )
+
 
 func init() {
 	databases = append(databases, database{
-		name:    "mysql",
-		connEnv: "MYSQL_CONN_STRING",
+		name: "mysql",
+		db:   mysql.Open(os.Getenv("MYSQL_CONN_STRING")),
 	})
 }
